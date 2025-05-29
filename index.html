@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Saya</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      overflow-x: hidden;
+      text-align: center;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, #6a0dad, #8e44ad, #ece9e6, #ffffff);
+      background-size: 300% 300%;
+      animation: gradientAnimation 10s ease infinite;
+      z-index: -1;
+    }
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    header {
+      background: rgba(106, 13, 173, 0.9);
+      color: white;
+      padding: 50px 20px;
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #8e44ad;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    h2 {
+      color: #6a0dad;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .flex-item {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .section {
+      flex-grow: 1;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out;
+      border: 2px solid #8e44ad;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .section:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+    .pendidikan { background: #d1c4e9; }
+    .soft-skill { background: #f8bbd0; }
+    .hard-skill { background: hsl(199, 65%, 70%); }
+    .sertifikat { background: rgb(104, 235, 109); }
+    footer {
+      padding: 15px;
+      background: rgba(106, 13, 173, 0.9);
+      color: white;
+      margin-top: 30px;
+      font-size: 16px;
+    }
+    @media (max-width: 768px) {
+      .flex-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>Nisa Aulia Zulika Zulkaidah</header>
+  <div class="container">
+    <img src="nisa.png" alt="Foto Profil" class="profile-img" />
+    <h2>Tentang Saya</h2>
+    <p>Saya adalah siswi SMKN 1 Nglegok jurusan Teknik Komputer dan Jaringan yang ingin memahami lebih dalam tentang teknologi informasi (IT).</p>
+
+    <div class="flex-container">
+      <div class="section pendidikan flex-item">
+        <h2>Pendidikan</h2>
+        <p>SDN Slumbung 01 (2014-2020)</p>
+        <p>SMPN 1 Gandusari (2020-2023)</p>
+        <p>SMKN 1 Nglegok (2023-Sekarang)</p>
+      </div>
+      <div class="section soft-skill flex-item">
+        <h2>Soft Skill</h2>
+        <p>Bekerja sama dalam tim</p>
+        <p>Manajemen waktu</p>
+        <p>Disiplin.</p>
+      </div>
+    </div>
+
+    <div class="flex-container">
+      <div class="section hard-skill flex-item">
+        <h2>Hard Skill</h2>
+        <h3>Debian</h3>
+        <p>Manajemen User, Manajemen File, IP Address, Remote SSH, DNS & DHCP Server, FTP & NTP Server,</p>
+        <p>SAMBA Server, Web Server (Apache & Nginx), Mail Server, Redhat.</p>
+        <h3>Mikrotik</h3>
+        <p>Wireless, Routing Static, TUNNEL EoIP, Router Gateway, Crimping Cable, Firewall, Basic OSPF.</p>
+      </div>
+      <div class="section sertifikat flex-item">
+        <h2>Sertifikat</h2>
+        <p>Network Fundamental, Getting Started Cybersecurity 2.0, Introduction Threat Landscape 2.0,</p>
+        <p>Technical Introduction Cybersecurity, Linux Fundamental.</p>
+        <!-- Tombol Cek Sertifikat -->
+        <button class="btn btn-dark mt-3" data-bs-toggle="modal" data-bs-target="#modalSertifikat">
+          <i class="fas fa-eye"></i> Cek Sertifikat
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="social-media">
+      <i class="fab fa-instagram"></i> <span>nisaauliaz.z</span>
+    </div>
+  </footer>
+
+  <!-- Modal Sertifikat -->
+  <div class="modal fade" id="modalSertifikat" tabindex="-1" aria-labelledby="modalSertifikatLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalSertifikatLabel">Galeri Sertifikat</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row g-3">
+                <!-- Sertifikat 1 -->
+                <div class="col-md-4">
+                  <img src="Linux Fundamental.png" alt="Sertifikat 1" class="img-fluid rounded shadow-sm">
+                </div>
+                <!-- Sertifikat 2 -->
+                <div class="col-md-4">
+                  <img src="Network Fundamental.png" alt="Sertifikat 2" class="img-fluid rounded shadow-sm">
+                </div>
+                <!-- Sertifikat 3 -->
+                <div class="col-md-4">
+                  <img src="Introduction.jpg" alt="Sertifikat 3" class="img-fluid rounded shadow-sm">
+                </div>
+                <!-- Tambah sertifikat lain di sini -->
+                <div class="col-md-4">
+                  <img src="Technical Introduction.png" alt="Sertifikat 4" class="img-fluid rounded shadow-sm">
+              </div>
+              <div class="col-md-4">
+              <img src="Getting Started Cybersecurity.jpg" alt="Sertifikat 5" class="img-fluid rounded shadow-sm">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
